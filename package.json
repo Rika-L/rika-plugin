@@ -1,10 +1,10 @@
 {
   "name": "rika-plugin",
   "version": "1.0.2",
-  "description": "",
-  "author": "",
+  "description": " my plugin for vite/rsbuild",
+  "author": "Rika",
   "license": "ISC",
-  "keywords": [],
+  "keywords": ["vite", "rsbuild", "plugin"],
   "exports": {
     ".": {
       "import": "./dist/index.js",
