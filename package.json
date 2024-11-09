@@ -1,6 +1,6 @@
 {
   "name": "rika-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "author": "",
   "license": "ISC",
@@ -9,6 +9,14 @@
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
+    },
+    "./rsbuild": {
+      "import": "./dist/rsbuild.js",
+      "require": "./dist/rsbuild.cjs"
+    },
+    "./vite": {
+      "import": "./dist/vite.js",
+      "require": "./dist/vite.cjs"
     }
   },
   "main": "dist/index.cjs",
@@ -28,10 +36,14 @@
   "scripts": {
     "build": "tsup",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "prepublishOnly": "pnpm build" 
   },
   "peerDependenciesMeta": {
     "@rsbuild/core": {
+      "optional": true
+    },
+    "vite": {
       "optional": true
     }
   },
@@ -41,6 +53,7 @@
     "eslint": "^9.14.0",
     "gradient-string": "^3.0.0",
     "tsup": "^8.3.5",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
   }
 }
